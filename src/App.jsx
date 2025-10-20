@@ -5,8 +5,8 @@ function App() {
   
   const watches=[
     {id: 1, name: 'CASIO', price: 500},
-    {id: 1, name: 'Apple', price: 3300},
-    {id: 1, name: 'Royal', price: 60000},
+    {id: 2, name: 'Apple', price: 3300},
+    {id: 3, name: 'Royal', price: 60000},
   ]
 
   return (
