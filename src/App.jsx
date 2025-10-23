@@ -1,7 +1,15 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import Watch from './watch'
 
 function App() {
+  const [watches, setWatches]=useState([]);
+  
+  useEffect(()=>{
+    fetch('watches.json')
+    .then(res=> res.json())
+    .then(date=>setWatches(date));
+  }, [])
   
   // const watches=[
   //   {id: 1, name: 'CASIO watch', price: 500},
@@ -9,13 +17,13 @@ function App() {
   //   {id: 3, name: 'Royal Watch', price: 60400},
   // ]
 
-  const watches = [
-  { id: 1, name: "Apple Watch Series 9", price: 399 },
-  { id: 2, name: "Samsung Galaxy Watch 6", price: 349 },
-  { id: 3, name: "Fitbit Versa 4", price: 229 },
-  { id: 4, name: "Garmin Venu 3", price: 449 },
-  { id: 5, name: "Amazfit GTR 4", price: 199 }
-];
+//   const watches = [
+//   { id: 1, name: "Apple Watch Series 9", price: 399 },
+//   { id: 2, name: "Samsung Galaxy Watch 6", price: 349 },
+//   { id: 3, name: "Fitbit Versa 4", price: 229 },
+//   { id: 4, name: "Garmin Venu 3", price: 449 },
+//   { id: 5, name: "Amazfit GTR 4", price: 199 }
+// ];
 
 
   return (
